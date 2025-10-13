@@ -1,0 +1,1 @@
+roslaunch sensors_status sensors_status.launch
