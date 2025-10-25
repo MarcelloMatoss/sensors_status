@@ -9,7 +9,6 @@ project(sensors_status)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
   dynamic_reconfigure
-  realsense2_camera
   roscpp
   rospy
   sensor_msgs
