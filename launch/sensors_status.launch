@@ -1,4 +1,4 @@
 <launch>
     <rosparam file="$(find sensors_status)/config/sensors_status_config.yaml" />
-    <node name ="status" pkg="sensors_status" type="sensors_status.py" output="screen"/>
+    <node name ="status" pkg="sensors_status" type="sensors_status1.py" output="screen"/>
 </launch>

@@ -2,7 +2,7 @@ sensors:
   - sensor: livox
     topics_sensor: ['/livox/imu', '/livox/lidar']
     msgs_types: ['sensor_msgs/Imu', 'sensor_msgs/PointCloud2']
-    topics_frequency: [200, 10]
+    topics_frequency: [100, 10]
     sampling: [100, 5]
     frequency_tolerance: [0.2, 0.2]
     max_downtime: 1
