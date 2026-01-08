@@ -12,25 +12,23 @@ cd ~/catkin_ws/src
 ```
 Clone este repositório:
 ```
-git clone 
+git clone https://github.com/MarcelloMatoss/sensors_status.git
 ```
 Compile sua workspace:
 ```
 cd ..
 catkin make
 ```
+```
+source devel/setup.bash
+```
+### Configuration
+Para adicionar ou remover sensores e tópicos para  a verificação
+```
+
+```
 ## How to use
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 roslaunch sensors_status sensors_status.launch
+```
+
