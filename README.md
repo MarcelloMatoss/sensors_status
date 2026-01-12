@@ -23,7 +23,7 @@ catkin make
 source devel/setup.bash
 ```
 ### Configuration
-Para adicionar ou remover sensores e tópicos para  a verificação
+Para adicionar ou remover sensores e tópicos para a verificação altere o arquivo de configuração catkin_ws/src/espeleo_planning2/config/sensor_status_config.yaml
 ```
 
 ```
