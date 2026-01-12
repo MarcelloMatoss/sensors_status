@@ -27,6 +27,8 @@ source devel/setup.bash
 The sensor settings (topics, message types, frequency, sampling rate, tolerance, and status topic) can be configured in the following file:
 
 `catkin_ws/src/espeleo_planning2/config/sensor_status_config.yaml`
+
+Below is an example showing distinct sensors with different topics and message types.
 ```
 sensors:
   - sensor: livox
