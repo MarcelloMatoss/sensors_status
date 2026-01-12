@@ -62,4 +62,6 @@ Launch the checker with:
 ```
 roslaunch sensors_status sensors_status.launch
 ```
+### Output
+
 
