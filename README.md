@@ -3,31 +3,43 @@ Package for verifying the publication status of sensor topics. This package prov
 ## Installation
 
 ### Prerequisites
-ROS Noetic
+`ROS Noetic`
 ### Installation Steps
-Crie e navegue até sua workspace ROS:
+Create and navigate to your ROS workspace:
 ```
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws/src
 ```
-Clone este repositório:
+Clone this repository:
 ```
 git clone https://github.com/MarcelloMatoss/sensors_status.git
 ```
-Compile sua workspace:
+Build your workspace:
 ```
 cd ..
 catkin make
 ```
+Load the environment variables:
 ```
 source devel/setup.bash
 ```
 ### Configuration
-Para adicionar ou remover sensores e tópicos para a verificação altere o arquivo de configuração catkin_ws/src/espeleo_planning2/config/sensor_status_config.yaml
-```
+The sensor settings (topics, message types, frequency, sampling rate, tolerance, and status topic) can be configured in the following file:
 
+`catkin_ws/src/espeleo_planning2/config/sensor_status_config.yaml`
+```
+sensors:
+  - sensor: sensor_1
+    topics_sensor: ['/topic_1, '/topic_2']
+    msgs_types: ['mensage_type_1', 'mensage_type_2']
+    topics_frequency: [topic_1_frequency, topics_2_frequency]
+    sampling: [sampling_topic_1, sampling_topic_1]
+    frequency_tolerance: [frequency_tolerance_topic_1, frequency_tolerance_topic_2]
+    max_downtime: 1 #seconds
+    status_topic_pub: '/topic_pub'
 ```
 ## How to use
+Launch the checker with:
 ```
 roslaunch sensors_status sensors_status.launch
 ```
