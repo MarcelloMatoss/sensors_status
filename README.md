@@ -31,14 +31,14 @@ The sensor settings (topics, message types, frequency, sampling rate, tolerance,
 Below is an example showing distinct sensors with different topics and message types.
 ```
 sensors:
-  - sensor: livox
-    topics_sensor: ['/livox/imu', '/livox/lidar']
-    msgs_types: ['sensor_msgs/Imu', 'sensor_msgs/PointCloud2']
-    topics_frequency: [100, 10]
-    sampling: [10, 5]
-    frequency_tolerance: [0.2, 0.2]
-    max_downtime: 1
-    status_topic_pub: '/status/livox'
+  - sensor: livox # Sensor name
+    topics_sensor: ['/livox/imu', '/livox/lidar'] # Sensor topics to be checked
+    msgs_types: ['sensor_msgs/Imu', 'sensor_msgs/PointCloud2'] # Message type of each topic
+    topics_frequency: [100, 10] # Expected frequency of each topic
+    sampling: [10, 5] # Sampling used for the verification of each sensor
+    frequency_tolerance: [0.2, 0.2] # Allowed percentage tolerance for topic frequency
+    max_downtime: 1 # Maximum allowed time without publication (inactivity)
+    status_topic_pub: '/status/livox' # Topic where the status will be published
   - sensor: xsens
     topics_sensor: ['/imu/data', '/imu/mag']
     msgs_types: ['sensor_msgs/Imu', 'sensor_msgs/MagneticField']
