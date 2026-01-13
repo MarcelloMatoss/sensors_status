@@ -23,7 +23,7 @@ Load the environment variables:
 ```
 source devel/setup.bash
 ```
-### Configuration
+## Configuration
 The sensor settings (topics, message types, frequency, sampling rate, tolerance, and status topic) can be configured in the following file:
 
 `catkin_ws/src/espeleo_planning2/config/sensor_status_config.yaml`
@@ -62,7 +62,7 @@ Launch the checker with:
 ```
 roslaunch sensors_status sensors_status.launch
 ```
-### Output
+## Output
 
 After the launch, the checker will publish, for each sensor, a topic of type `Float32MultiArray` with the name defined in the configuration file. The verified sensor topics are described in the `layout.dim` field, while the data field contains an array of float values representing the state of each topic, preserving the same order defined in `layout.dim`.
 
