@@ -64,4 +64,30 @@ roslaunch sensors_status sensors_status.launch
 ```
 ### Output
 
+After the launch, the checker will publish, for each sensor, a topic of type `Float32MultiArray` with the name defined in the configuration file. The verified sensor topics are described in the `layout.dim` field, while the data field contains an array of float values representing the state of each topic, preserving the same order defined in `layout.dim`.
+
+The output will contain four distinct values to represent the sensor state:
+
+* 0.0 indicates that the sensor is not publishing;
+* 0.5 indicates that the sensor is publishing, but at a rate lower than the defined one;
+* 1.0 indicates that the sensor is publishing at the correct rate;
+* 1.5 indicates that the sensor is publishing above the defined rate.
+
+Below is an example of the `Float32MultiArray` message published by the checker for a sensor with two monitored topics.
+```
+layout: 
+  dim: 
+    - 
+      label: "/livox/imu"
+      size: 1
+      stride: 1
+    - 
+      label: "/livox/lidar"
+      size: 1
+      stride: 1
+  data_offset: 0
+data: [1.5, 1.0]
+---
+
+```
 
